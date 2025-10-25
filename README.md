@@ -166,15 +166,13 @@ This tool is designed to be extensible. Key areas for enhancement:
 - GUI interface
 - Batch processing capabilities
 
-## License
-
 This project is provided as-is for educational and development purposes.
 difference between the pip and depfix.py.
 
-| Function                                           | **pip (built-in resolver)**                       | **Your Dependency Resolver Project**                                       |
-| -------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------- |
-| 🧩 **Scans existing environment for conflicts**    | ❌ Only checks during installation                 | ✅ Scans *already installed* packages for version conflicts                 |
-| 🧠 **Understands dependency chains**               | ⚠️ Limited (just enough for install)              | ✅ Builds a full dependency graph and explains conflicts clearly            |
+| Function                                           | **pip (built-in resolver)**                        | **Your Dependency Resolver Project**                                        |
+| -------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------- |
+| 🧩 **Scans existing environment for conflicts**    | ❌ Only checks during installation                 | ✅ Scans _already installed_ packages for version conflicts                 |
+| 🧠 **Understands dependency chains**               | ⚠️ Limited (just enough for install)               | ✅ Builds a full dependency graph and explains conflicts clearly            |
 | 📊 **Generates detailed conflict reports**         | ❌ No reporting, just error messages               | ✅ Produces structured JSON + CLI reports for every conflict                |
 | 🧰 **Auto-fixes broken environments**              | ❌ You must manually reinstall or upgrade packages | ✅ Automatically selects compatible versions and resolves them              |
 | 🧪 **Creates controlled test conflicts**           | ❌ Not possible                                    | ✅ `conflict_setup.py` purposely installs incompatible versions for testing |
